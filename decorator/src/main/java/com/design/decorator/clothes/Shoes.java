@@ -10,8 +10,8 @@ import com.design.decorator.po.User;
 public class Shoes extends AbstractClothes {
 
     @Override
-    public String getClothesName() {
-        return "鞋子";
-
+    public void show() {
+        super.show();
+        System.out.print(" 鞋子 ");
     }
 }

@@ -18,8 +18,8 @@ public class DoShow {
         Shoes shoes = new Shoes();
         Tshirt tshirt = new Tshirt();
         pants.wear(user);
-        shoes.wear(user);
-        tshirt.wear(user);
-        user.show();
+        shoes.wear(pants);
+        tshirt.wear(shoes);
+        tshirt.show();
     }
 }

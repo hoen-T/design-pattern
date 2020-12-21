@@ -10,7 +10,8 @@ import com.design.decorator.po.User;
 public class Pants extends AbstractClothes {
 
     @Override
-    public String getClothesName() {
-        return "裤子";
+    public void show() {
+        super.show();
+        System.out.print(" 裤子 ");
     }
 }

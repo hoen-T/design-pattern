@@ -7,14 +7,19 @@ import com.design.decorator.po.User;
  *
  * @author hoen-T
  */
-public abstract class AbstractClothes implements Clothes {
+public abstract class AbstractClothes extends User {
+
+    protected User user;
 
     public void wear(User user) {
-        user.wearClothes(this);
+        this.user = user;
     }
 
     public AbstractClothes() {
-
     }
 
+    @Override
+    public void show() {
+        user.show();
+    }
 }

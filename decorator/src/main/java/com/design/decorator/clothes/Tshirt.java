@@ -2,6 +2,9 @@ package com.design.decorator.clothes;
 
 import com.design.decorator.po.User;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * T衬衫
  *
@@ -9,8 +12,10 @@ import com.design.decorator.po.User;
  **/
 public class Tshirt extends AbstractClothes {
 
+
     @Override
-    public String getClothesName() {
-        return "T衬衫";
+    public void show() {
+        super.show();
+        System.out.print(" T衬衫 ");
     }
 }

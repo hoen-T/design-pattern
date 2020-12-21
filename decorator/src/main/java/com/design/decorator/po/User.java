@@ -1,11 +1,5 @@
 package com.design.decorator.po;
 
-import com.design.decorator.clothes.Clothes;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * 用户实体类
  *
@@ -13,10 +7,6 @@ import java.util.stream.Collectors;
  **/
 public class User {
     private String name;
-    /**
-     * 身上穿的衣服
-     */
-    private List<Clothes> clothes = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -26,16 +16,11 @@ public class User {
         this.name = name;
     }
 
-    public void wearClothes(Clothes clothes) {
-        this.clothes.add(clothes);
-    }
-
     /**
      * 展示身上穿的衣服
      */
     public void show() {
-        List<String> collect = clothes.stream().map(Clothes::getClothesName).collect(Collectors.toList());
-        System.out.println(getName() + "穿上了" + collect.toString());
+        System.out.print(name + "穿上了 ");
     }
 
     public User() {
